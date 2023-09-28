@@ -4,51 +4,192 @@
     font-family: 'Lato', sans-serif;
 }
 
-:root {
-    --primary-color: rgb(241, 197, 0);
+:root { 
+    --first-color: #001E26;
+    --second-color: #005066;
+    --third-color: #11576B;
+    --fourth-color: #00B4E6;
+    --fifth-color: #46C6EA;
+    --second-black:  #rgb(0, 16, 20)
+
+    --main-box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
 }
 
 body {
     margin: 0 auto;
-    background-image: url(img/background.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-color: var(--second-color);
+    padding: 1px;
 }
 
 .cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     color: white;
     padding: 1px;
     padding-left: 57px;
     box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
-    background-image: linear-gradient(to right, #005066 70%, #46C6EA);
+    background-image: linear-gradient(to right, var(--second-color) 70%, var(--fifth-color));
+    align-items: center;
+}
+
+li {
+    display: inline-block;
+    margin: 18px;
+    color: white;
+    font-weight: 800;
+}
+
+.cabecalho h1 {
+    font-weight: 980;
+}
+
+#titulo a{
+    color: white;
+    text-decoration: none;
+}
+
+.navigation_header {
+    padding: 1px;
+}
+
+.navigation_header a:hover {
+    font-size: 17px;
+    transition: 0.5s linear;
+    filter: drop-shadow(0px 0px 0.1px #ffffff);
+}
+
+#titulo h1:hover {
+    font-size: 30px;
+    transition: 0.5s;
 }
 
 .principal {
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin: 0 auto;
+    padding: 30px;
     padding-top: 30px;
     padding-left: 70px;
     padding-right: 70px;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.principal p {
+    font-size: 15px;
+}
+
+.benefits {
+    margin: 0;
+    background-color: var(--first-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.benefits h1{
+    font-weight: 1000;
+    filter: drop-shadow(1px 1px 5px #000000);
+}
+
+.benefits p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.benefit {
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.benefits img {
+    max-height: 20vh;
+    filter: drop-shadow(10px 10px 4px #000000);
+}
+
+#benefits_div {
+    margin: 0 auto;
+    background-color: var(--first-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.depoimentos {
+    padding-top: 10px;
+    background-color: #001014;
+    padding: 30px;
+}
+
+.depo-linha-1, .depo-linha-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#depo1, #depo2, #depo3, #depo4 {
+    background-image: linear-gradient(to right, #fff 45%, #aaaaaa);
+    max-width: 40vw;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#depo1 img, #depo2 img, #depo3 img, #depo4 img {
+    border-radius: 70px;
+    border: 2px #001014 solid;
+    max-height: 20px;
+}
+
+.depo-pessoas {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.depoimento img {
+    margin-top: 17px;
+    margin-right: 10px;
+}
+
+.depoimentos h1 {
+    font-weight: 1000;
+    text-align: center;
+    color: white;
+    filter: drop-shadow(1px 1px 5px #000000);
 }
 
 h1 {
-    font-size: 46px;
+    font-size: 26px;
 }
 
 h2 {
-    font-size: 40px;
-    text-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
+    font-size: 32px;
+    filter: drop-shadow(1px 1px 5px #000000);
+    font-weight: 1000;
+    text-align: center;
 }
 
 p {
     text-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
+    filter: drop-shadow(10px 1px 5px #000000);
+    text-align: center;
 }
 
 #info-texto {
     max-width: 47vw;
+}
+
+#info-texto p {
+    font-size: 20px;
 }
 
 #formulario {
@@ -58,7 +199,7 @@ p {
     text-align: center;
     border-radius: 20px;
     color: white;
-    background-image: linear-gradient(to right, #11576B, #00B4E6);
+    background-image: linear-gradient(to right, var(--third-color), var(--fourth-color));
     box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
 }
 
@@ -71,10 +212,28 @@ input {
     text-align: center;
 }
 
+input::placeholder {
+    color: black;
+}
+
+input:focus {
+    border: white;
+}
+
 button {
     border-radius: 10px;
     padding: 10px;
     width: 73vh;
     margin-bottom: 3px;
     border: none;
+    color: white;
+    background-color: var(--first-color);
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--second-color);
+    text-shadow: 1px -1px 5px 1px rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
