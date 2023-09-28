@@ -1,2 +1,2 @@
-# squeeze page html css
+# Email Landing Page
  
