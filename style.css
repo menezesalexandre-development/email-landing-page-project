@@ -145,8 +145,6 @@ li {
     padding: 1em;
     padding-left: 3em;
     padding-right: 3em;
-    margin: 1em;
-    border-radius: 20px;
 }
 
 .benefits img {
@@ -191,7 +189,7 @@ li {
     margin-bottom: 2em;
 }
 
-#depo1, #depo2, #depo3, #depo4 {
+.depoimento {
     background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
     max-width: 37em;
     padding: 20px;
@@ -223,6 +221,31 @@ li {
     filter: drop-shadow(1px 1px 3px #000000);
 }
 
+.certificado {
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+}
+
+#certificado_elements {
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.certificado h1 {
+    font-weight: 1000;
+    text-align: center;
+    color: white;
+    filter: drop-shadow(1px 1px 3px #000000);
+}
+
+.certificado img {
+    max-width: 30em;
+    margin-top: 3em;
+}
+
 h1 {
     font-size: 26px;
 }
@@ -240,11 +263,12 @@ p {
     text-align: center;
 }
 
-#info-texto {
+.info-texto {
+    color: white;
     max-width: 40em;
 }
 
-#info-texto p {
+.info-texto p {
     font-size: 20px;
 }
 
@@ -262,7 +286,7 @@ p {
 
 input {
     border-radius: 10px;
-    width: 440px;
+    width: 27.5em;
     margin-bottom: 3px;
     border: none;
     padding: 10px;
@@ -280,7 +304,7 @@ input:focus {
 button {
     border-radius: 10px;
     padding: 10px;
-    width: 460px;
+    width: 28.75em;
     margin-bottom: 3px;
     border: none;
     color: white;
@@ -294,91 +318,107 @@ button:hover {
     transition: 0.5s;
 }
 
+/*LARGURA MÍNIMA: 1281 PIXELS*/
+@media screen and (min-width: 1281px) {
+    .depoimento {
+        padding: 20px;
+    }
+}
+
 /*LARGURA: 1280 PIXELS*/
 @media screen and (max-width: 1280px) {
-    #info-texto p {
-        font-size: 21px;
+    .info-texto p {
+        font-size: 1.3em;
     }
 
     #formulario {
         max-height: 55vh;
+    }
+
+    .depoimento {
+        padding: 10px;
+    }
+
+    .depoimento p {
+        font-size: 0.9em;
+    }
+
+    #depo1 img, #depo2 img, #depo3 img, #depo4 img {
+        max-height: 2em;
     }
 }
 
 /*LARGURA: 1024 PIXELS*/
 @media screen and (max-width: 1024px){   
     .principal h2{
-        font-size: 29px;
+        font-size: 1.5em;
+    }
+
+    #formulario {
+        max-width: 28em;
     }
 
     #formulario h2 {
         margin-top: -0.01px;
     }
 
-    #info-texto p {
-        font-size: 15px;
+    #formulario p {
+        font-size: 0.9em;
+    }
+
+    .info-texto p {
+        font-size: 1em;
     }
 
     .benefits p {
-        font-size: 12.5px;
+        font-size: 0.69em;
     }
 
     .depoimentos h3 {
         font-size: 14px;
     }
 
-    .depoimentos p {
-        font-size: 12.5px;
-    }
-
     .depoimentos img {
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 881px) {
-    .principal h2 {
-        font-size: 20px;
+        margin-top: 0.8em;
     }
 
-    #formulario {
-        padding-right: 33px;
+    .depoimento {
+        padding: 0.4em;
     }
 
-    #info-texto p {
-        font-size: 11.5px;
+    .depoimento p {
+        font-size: 0.8em;
+        max-width: 35em;
     }
 
-    .benefits p {
-        text-align: center;
-        line-height: 11.5px;
-        font-size: 10.5px;
+    #depo1 img, #depo2 img, #depo3 img, #depo4 img {
+        max-height: 2em;
     }
 
-    .navigation_footer li {
-        font-size: 15px;
+    #info-texto2 h2 {
+        font-size: 1.7em;
     }
 }
 
 @media screen and (max-width: 768px) {
     .principal h2 {
-        font-size: 19px;
+        font-size: 1em;
     }
 
     #formulario p {
         font-size: 13px;
     }
 
-    #info-texto p {
-        font-size: 14.6px;
+    #info-texto1 p {
+        font-size: 0.92em;
     }
 
     input {
-        width: 30vw;
+        width: 17em;
     }
 
     button {
-        width: 33vw;
+        width: 19em;
     }
 
     .benefits {
@@ -387,28 +427,82 @@ button:hover {
     }
 
     .benefits p {
-        font-size: 11px;
-        line-height: 12px;
+        font-size: 0.8em;
+        line-height: 1em;
+        text-align: justify;
+        max-width: 10em;
     }
 
-    .depoimentos {
-        padding-top: 20px;
+    .benefits {
+        padding: 0em;
+    }
+
+    .benefits img {
+        max-height: 4.5em;
+        filter: drop-shadow(10px 10px 4px #000000);
+    }
+
+    .benefit {
+        padding: 0em;
+        margin: 0;
     }
 
     .depoimentos h1 {
         margin-top: 0.1px;
     }
 
+    .depoimentos h3 {
+        font-size: 14px;
+    }
+
+    .depoimentos img {
+        margin-top: 0.8em;
+    }
+
     .depoimento {
-        padding: 1px;
+        padding: 0.4em;
     }
 
     .depoimento p {
-        font-size: 11px;
+        font-size: 0.7em;
+        max-width: 30em;
+    }
+
+    #depo1 img, #depo2 img, #depo3 img, #depo4 img {
+        max-height: 1.7em;
+    }
+
+    .certificado {
+        background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    }
+    
+    #certificado_elements {
+        padding: 1em;
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .certificado h1 {
+        font-weight: 1000;
+        text-align: center;
+        color: white;
+        filter: drop-shadow(1px 1px 3px #000000);
+    }
+    
+    .certificado img {
+        max-width: 18em;
+        margin-top: 5em;
+    }
+
+    #info-texto2 h2 {
+        font-size: 1.2em;
     }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px) {
     .cabecalho {
         flex-direction: column;
         padding-left: 3px;
@@ -416,6 +510,20 @@ button:hover {
 
     .cabecalho h1 {
         margin-bottom: 0px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding-left: 3px;
+    }
+
+    .rodape h1 {
+        margin-bottom: 0px;
+    }
+
+    .navigation_footer {
+        padding: 0px;
+        margin: 0px;
     }
 
     .navigation_header {
@@ -428,14 +536,88 @@ button:hover {
         margin-right: 22px;
     }
 
-    .principal {
+    #principal_elements {
+        padding: 0em;
+        padding-left: 1em;
+        padding-right: 1em;
         flex-direction: column;
     } 
 
-    .principal p {
-        font-size: 20px;
-        padding-right: 1px;
+    #info-texto1 {
+        padding-left: 2.2em;
+        padding-right: 2.2em;
     }
 
+    #info-texto1 p {
+        margin-top: 0em;
+        font-size: 0.8em;
+    }
+
+    #info-texto1 h2 {
+        font-size: 1.4em;
+        overflow: hidden;
+        max-width: 20em;
+    }
+
+    #formulario {
+        max-width: 25em;
+    }
+
+    .info-texto h2 {
+        font-size: 1.5em;
+    }
+
+    .principal {
+        font-size: 20px;
+        padding-bottom: 1em;
+    }
+
+    .benefits h1 {
+        font-size: 1.2em;
+    }
+
+    .benefits p {
+        font-size: 0.6em;
+    }
+
+    .benefit {
+        padding-top: 0em;
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .depoimento p {
+        max-width: 17em;
+    }
+
+    .certificado {
+        background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    }
+    
+    #certificado_elements {
+        padding: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .certificado h1 {
+        font-weight: 1000;
+        text-align: center;
+        color: white;
+        filter: drop-shadow(1px 1px 3px #000000);
+    }
+    
+    .certificado img {
+        max-width: 18em;
+        margin-left: 3em;
+        margin-top: 0em;
+    }
+
+    #info-texto2 h2 {
+        font-size: 1.2em;
+    }
 }
 
