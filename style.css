@@ -17,37 +17,46 @@
 
 body {
     margin: 0 auto;
-    background-color: var(--second-color);
-    padding: 1px;
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    padding: 0em;
+}
+
+section {
+    margin: 0 auto;
+}
+
+.elements {
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
 .cabecalho {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    overflow: hidden;
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    justify-content: space-between;
     color: white;
-    padding: 1px;
-    padding-left: 57px;
-    box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
-    background-image: linear-gradient(to right, var(--second-color) 70%, var(--fifth-color));
+    padding: 0.06em;
+    padding-left: 3.56em;
     align-items: center;
 }
 
 .rodape {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    overflow: hidden;
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    justify-content: space-between;
     color: white;
-    padding: 1px;
-    padding-left: 57px;
-    box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
-    background-image: linear-gradient(to right, var(--second-color) 70%, var(--fifth-color));
+    padding: 0.06em;
+    padding-left: 3.56em;
     align-items: center;
 }
 
 li {
     display: inline-block;
-    margin: 18px;
+    margin: 1.12em;
     color: white;
     font-weight: 800;
 }
@@ -62,57 +71,63 @@ li {
 }
 
 .navigation_header {
-    padding: 1px;
+    padding: 0.06em;
 }
 
 .navigation_header a:hover {
-    font-size: 17px;
+    font-size: 1.06em;
     transition: 0.5s linear;
     filter: drop-shadow(0px 0px 0.1px #ffffff);
 }
 
 .navigation_footer {
-    padding: 1px;
+    padding: 0.06em;
 }
 
 .navigation_footer a:hover {
-    font-size: 17px;
+    font-size: 1.06em;
     transition: 0.5s linear;
     filter: drop-shadow(0px 0px 0.1px #ffffff);
 }
 
 #titulo h1:hover {
-    font-size: 30px;
+    font-size: 1.875em;
     transition: 0.5s;
 }
 
 .principal {
-    background-image: url(img/background.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: url(img/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#principal_elements {
     margin: 0 auto;
-    padding: 30px;
-    padding-top: 30px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 1.87em;
+    padding-top: 1.87em;
+    padding-left: 4.37em;
+    padding-right: 4.37em;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    max-width: 1920px;
 }
 
 .principal p {
-    font-size: 15px;
+    font-size: 0.93em;
 }
 
 .benefits {
-    margin: 0;
-    background-color: var(--first-color);
+    margin: 0 auto;
     color: white;
     text-align: center;
-    padding: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 1.25em;
+    padding-left: 3.75em;
+    padding-right: 3.75em;
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
 }
 
 .benefits h1{
@@ -122,38 +137,42 @@ li {
 
 .benefits p {
     text-align: justify;
-    font-size: 14px;
+    font-size: 0.87em;
 }
 
 .benefit {
-    padding-top: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 2em;
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: 1em;
+    border-radius: 20px;
 }
 
 .benefits img {
-    max-height: 20vh;
+    max-height: 7em;
     filter: drop-shadow(10px 10px 4px #000000);
 }
 
 #benefits_div {
     margin: 0 auto;
-    background-color: var(--first-color);
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    max-width: 1920px;
 }
 
 .depoimentos {
-    padding-top: 10px;
-    background-color: #001014;
-    padding: 30px;
+    padding-bottom: 3em;
+    background-image: linear-gradient(to right, var(--second-color), var(--first-color) 70%);
+    padding: 1em;
 }
 
 .depoimentos h3 {
     color: white;
     filter: drop-shadow(1px 1px 2px #000000);
+    margin-top: 1.5em;
 }
 
 .depoimentos p {
@@ -168,9 +187,13 @@ li {
     margin-top: 20px;
 }
 
+.depo-linha-2 {
+    margin-bottom: 2em;
+}
+
 #depo1, #depo2, #depo3, #depo4 {
-    background-image: linear-gradient(to right, var(--third-color), var(--fifth-color) 45%);
-    max-width: 40vw;
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
+    max-width: 37em;
     padding: 20px;
     border-radius: 20px;
     filter: drop-shadow(5px 5px 1px #fff);
@@ -179,7 +202,7 @@ li {
 #depo1 img, #depo2 img, #depo3 img, #depo4 img {
     border-radius: 70px;
     border: 2px #001014 solid;
-    max-height: 20px;
+    max-height: 3em;
 }
 
 .depo-pessoas {
@@ -218,7 +241,7 @@ p {
 }
 
 #info-texto {
-    max-width: 47vw;
+    max-width: 40em;
 }
 
 #info-texto p {
@@ -226,14 +249,14 @@ p {
 }
 
 #formulario {
-    max-width: 50vw;
-    max-height: 50vh;
-    margin-left: 20px;
+    max-width: 40em;
+    max-height: 40em;
+    margin-left: 1em;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     color: white;
-    background-image: linear-gradient(to right, var(--third-color), var(--fourth-color));
+    background-image: linear-gradient(to right, var(--first-color) 70%, var(--second-color));
     box-shadow: 1px -1px 50px 1px rgb(0, 0, 0);
 }
 
